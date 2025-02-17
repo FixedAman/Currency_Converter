@@ -1,7 +1,12 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Converter from "./components/Converter";
+const queryClient = new QueryClient();
 const App = () => {
   return (
     <>
-      <h1>App</h1>
+      <QueryClientProvider client={queryClient}>
+        <Converter />
+      </QueryClientProvider>
     </>
   );
 };
