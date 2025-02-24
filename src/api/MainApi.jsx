@@ -9,6 +9,6 @@ export const currencyConverter = async (first, second, amount) => {
     const res = await api.get(`pair/${first}/${second}/${amount}`);
     return res.data;
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
   }
 };
